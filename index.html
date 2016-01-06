@@ -3,12 +3,23 @@
   <head>
     <meta charset="utf-8">
     <title>Lauren Spatz</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style/skeleton.css">
+    <link rel="stylesheet" href="style/normalize.css">
+    <link rel="stylesheet" href="style/style.css">
 
   </head>
   <body>
+    <section class='wrapper'>
+      <section class='container'>
     <header>
       <h2> Lauren Nicole Spatz</h2>
+      <nav>
+        <ul>
+          <li>Home</li>
+          <li>About</li>
+        </ul>
+      </nav>
+    </header>
       <img class='headShot' src="images/IMG_0054.jpg">
       <ul>
       <a href='https://www.facebook.com/laurens914'><img src='images/facebook.png'></a>
@@ -16,7 +27,7 @@
       <a href='https://github.com/laurens914'><img src='images/github.png'></a>
       <a href='https://twitter.com/laurennicole747'><img src='images/twitter.png'></a>
     </ul>
-    <section id="portfolio">
+    <!-- <section id="portfolio">
         <article class="template">
           <header>
             <h1>Title</h1>
@@ -27,19 +38,28 @@
           </header>
           <section class="article-body"></section>
         </article>
-      </section>
+      </section> -->
 
       <section id="jobs">
-        <article class="template">
+        <article class="template2">
           <header>
-            <h3 class='h32'>Job Title</h3>
+            <h3></h3>
             <div class="Jobs">
+              <ul>
+                <li class= "company"></li>
+                <li class="dateStarted"></li>
+                <li class="dateLeft"></li>
+                <li class="jobDescription"></li>
+              </ul>
             </div>
           </header>
           <section class="article-body"></section>
         </article>
       </section>
+    </section>
+    </section>
   <script src="jquery-2.1.4.min.js"></script>
+  <script src='jobInfo.js'></script>
   <script src='app.js'></script>
   </body>
 </html>
