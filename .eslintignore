@@ -8,4 +8,4 @@ js/chartjs
 .DS_Store
 .eslintrc
 .eslintignore
-jquery-2.1.4.min.js 
+script/jquery-2.1.4.min.js
