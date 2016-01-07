@@ -65,3 +65,17 @@ jobData.forEach(function(ele) {
 careers.forEach(function(a){
   $('#jobs').append(a.toHtml())
 });
+
+  $('#jobSelector').on('click', function() {
+    $('section.about-me').fadeOut();
+    $('section.jobs').fadeIn();
+  });
+
+$('#about').on('click', function(){
+  $('section.jobs').fadeOut();
+  $('section.about-me').fadeIn();
+});
+
+$('#home').on('click', function(){
+  location.reload();
+})
