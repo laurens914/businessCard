@@ -1,3 +1,53 @@
+
+var careers = [];
+
+function Jobs (jobHistory){
+  this.jobTitle = jobHistory.jobTitle;
+  this.company = jobHistory.company;
+  this.dateStarted = jobHistory.dateStarted;
+  this.dateLeft = jobHistory.dateLeft;
+  this.jobDescription = jobHistory.jobDescription;
+}
+
+Jobs.prototype.toHtml = function() {
+  var jobTemplate = $('#jobPosting').html();
+  var compiledTemplate = Handlebars.compile(jobTemplate);
+  return compiledTemplate(this);
+};
+
+
+jobData.sort(function(a,b){
+  return (new Date (b.dateLeft))- (new Date(a.dateLeft));
+});
+jobData.forEach(function(ele) {
+  careers.push(new Jobs(ele));
+});
+
+careers.forEach(function(a){
+  $('#jobShow').append(a.toHtml())
+});
+
+
+  $('#jobSelector').on('click', function() {
+    $('section.about-me').fadeOut();
+    $('section.jobs').fadeIn();
+  });
+
+$('#about').on('click', function(){
+  $('section.jobs').fadeOut();
+  $('section.about-me').fadeIn();
+});
+
+$('#home').on('click', function(){
+  location.reload();
+})
+
+$('#hamburger').on('click', function(){
+  $('.navbar ul').slideToggle();
+})
+
+
+// also to be added when i have the data to fill this in.
 // var port = [];
 //
 // function Portfolio (port){
@@ -30,52 +80,3 @@
 // port.forEach(function(a){
 //   $('#portfolio').append(a.toHtml())
 // });
-
-var careers = [];
-
-function Jobs (jobHistory){
-  this.jobTitle = jobHistory.jobTitle;
-  this.company = jobHistory.company;
-  this.dateStarted = jobHistory.dateStarted;
-  this.dateLeft = jobHistory.dateLeft;
-  this.jobDescription = jobHistory.jobDescription;
-}
-
-Jobs.prototype.toHtml = function (){
-  var $newJobs = $('article.template2').clone();
-
-  $newJobs.find('h3').text(this.jobTitle);
-  $newJobs.find('.company').text(this.company);
-  $newJobs.find('.dateStarted').text(this.dateStarted);
-  $newJobs.find('.dateLeft').text(this.dateLeft);
-  $newJobs.find('.jobDescription').text(this.jobDescription);
-
-  $newJobs.append('<hr>');
-  $newJobs.removeClass('template2')
-  return $newJobs;
-}
-
-jobData.sort(function(a,b){
-  return (new Date (b.dateLeft))- (new Date(a.dateLeft));
-});
-jobData.forEach(function(ele) {
-  careers.push(new Jobs(ele));
-});
-
-careers.forEach(function(a){
-  $('#jobs').append(a.toHtml())
-});
-
-  $('#jobSelector').on('click', function() {
-    $('section.about-me').fadeOut();
-    $('section.jobs').fadeIn();
-  });
-
-$('#about').on('click', function(){
-  $('section.jobs').fadeOut();
-  $('section.about-me').fadeIn();
-});
-
-$('#home').on('click', function(){
-  location.reload();
-})
