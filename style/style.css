@@ -1,9 +1,25 @@
+body {
+  margin-top: 3em;
+  background-color:#3B6377;
+  align-content: center;
+  color:#E8ECF5;
+}
+
+h2 {
+  font-family: Pacifico;
+}
+
+li {
+  font-family: Varela;
+}
+
 .headShot {
   height:15em;
   width:15em;
+  margin-bottom: 1em;
 }
 
-img {
+ul a img {
   height:2em;
   width:2em;
 
@@ -12,23 +28,47 @@ nav {
   display:block;
 }
 ul{
-  list-style-type:none;
+  list-style:none;
 }
 .navbar ul{
   display:inline-flex;
 }
-.navbar a{
-  padding:1em; 
-}
-body {
-  margin-top: 3em;
+#hamburger {
+  width: 7em;
+  height: 7em;
+  float:right;
   background-color:#3B6377;
-  align-content: center;
-  color:#E8ECF5;
 }
-.template2{
-  display: none;
+.navbar a{
+  padding:1em;
 }
+.navbar li {
+  margin-right: .4em;
+  font-size: 1.5em;
+  padding: .5em .2em;
+}
+/*.navbar:hover ul {
+  display: block;
+}*/
 a{
   text-decoration: none;
+}
+
+@media only screen and (min-width: 640px) {
+  #hamburger {
+    display:none;
+  }
+  .navbar ul {
+    display:block !important; /* failsafe to keep open */
+  }
+  .navbar li{
+    display: inline-block;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .navbar ul {
+    display:none;
+  }
 }
