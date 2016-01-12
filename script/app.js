@@ -1,6 +1,6 @@
 
-var careers = [];
-
+Jobs.all = [];
+var checkData;
 function Jobs (jobHistory){
   this.jobTitle = jobHistory.jobTitle;
   this.company = jobHistory.company;
@@ -15,38 +15,48 @@ Jobs.prototype.toHtml = function() {
   return compiledTemplate(this);
 };
 
-
-jobData.sort(function(a,b){
-  return (new Date (b.dateLeft))- (new Date(a.dateLeft));
-});
-jobData.forEach(function(ele) {
-  careers.push(new Jobs(ele));
-});
-
-careers.forEach(function(a){
-  $('#jobShow').append(a.toHtml())
-});
-
-
-  $('#jobSelector').on('click', function() {
-    $('section.about-me').fadeOut();
-    $('section.jobs').fadeIn();
+Jobs.loadAll = function(rawData) {
+  rawData.forEach(function(ele) {
+    Jobs.all.push(new Jobs(ele));
   });
+};
 
-$('#about').on('click', function(){
-  $('section.jobs').fadeOut();
-  $('section.about-me').fadeIn();
-});
+Jobs.fetchAll = function() {
+  if (localStorage.rawData) {
+    Jobs.loadAll(JSON.parse(localStorage.rawData));
+    jobView.initIndexPage();
+  } else {
+    console.log('got here');
+    $.getJSON('/data/jobInfo.json').done(function(rawData){
+      Jobs.loadAll(rawData);
+      localStorage.rawData = JSON.stringify(rawData);
+      jobView.initIndexPage();
+    });
+  }
+};
 
-$('#home').on('click', function(){
-  location.reload();
-})
 
-$('#hamburger').on('click', function(){
-  $('.navbar ul').slideToggle();
-})
+//
 
 
+
+
+
+
+
+
+
+// jobData.sort(function(a,b){
+//   return (new Date (b.dateLeft))- (new Date(a.dateLeft));
+// });
+// jobData.forEach(function(ele) {
+//   careers.push(new Jobs(ele));
+// });
+//
+// careers.forEach(function(a){
+//   $('#jobShow').append(a.toHtml())
+// });
+//
 // also to be added when i have the data to fill this in.
 // var port = [];
 //

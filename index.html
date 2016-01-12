@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style/icons.css">
     <link rel="stylesheet" href="style/skeleton.css">
     <link rel="stylesheet" href="style/normalize.css">
+    <link href='https://fonts.googleapis.com/css?family=Pacifico|Varela' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="style/style.css">
     <script id='jobPosting' type='text/x-handlebars-template'>
       <section class='jobs' id="jobs">
@@ -58,8 +59,11 @@
 </section><!--closes the container-->
   <script src="script/jquery-2.1.4.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
-  <script src='script/jobInfo.js'></script>
+  <script src='script/jobView.js'></script>
   <script src='script/app.js'></script>
+  <script>
+    Jobs.fetchAll();
+  </script>
 </body>
 </html>
 

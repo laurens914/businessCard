@@ -5,6 +5,14 @@ body {
   color:#E8ECF5;
 }
 
+h2 {
+  font-family: Pacifico;
+}
+
+li {
+  font-family: Varela;
+}
+
 .headShot {
   height:15em;
   width:15em;
