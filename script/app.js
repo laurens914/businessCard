@@ -15,21 +15,21 @@ Jobs.prototype.toHtml = function() {
   return compiledTemplate(this);
 };
 
-Jobs.loadAll = function(rawData) {
-  rawData.forEach(function(ele) {
+Jobs.loadAll = function(jobData) {
+  jobData.forEach(function(ele) {
     Jobs.all.push(new Jobs(ele));
   });
 };
 
 Jobs.fetchAll = function() {
-  if (localStorage.rawData) {
-    Jobs.loadAll(JSON.parse(localStorage.rawData));
+  if (localStorage.jobData) {
+    Jobs.loadAll(JSON.parse(localStorage.jobData));
     jobView.initIndexPage();
   } else {
     console.log('got here');
-    $.getJSON('/data/jobInfo.json').done(function(rawData){
-      Jobs.loadAll(rawData);
-      localStorage.rawData = JSON.stringify(rawData);
+    $.getJSON('/data/jobInfo.json').done(function(jobData){
+      Jobs.loadAll(jobData);
+      localStorage.jobData = JSON.stringify(jobData);
       jobView.initIndexPage();
     });
   }

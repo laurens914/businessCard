@@ -22,7 +22,16 @@ $('#hamburger').on('click', function(){
 
 
 jobView.initIndexPage = function() {
-    Jobs.all.forEach(function(a){
-    $('#jobShow').append(a.toHtml())
-  })
+  Jobs.all.forEach(function(a){
+    $('#jobShow').append(a.toHtml());
+  });
+};
+
+var quarterbackView = {};
+
+quarterbackView.initAdminPage = function() {
+  var template = Handlebars.compile($('#dummy-template').text());// = ...?
+  Quarterbacks.allTeamNames().forEach(function(player) {
+    $('.dummyDataView').append(template(player));
+  });
 };
