@@ -12,6 +12,9 @@
     <script id="dummy-template" type="text/x-handlebars-template">
       <li>{{quarterback}} plays for the {{teamName}} </li>
     </script>
+    <script id="about-template" type="text/x-handlebars-template">
+    <a href="{{html_url}}"><li>{{name}}</li></a>
+  </script>
   </head>
   <body>
     <section class='wrapper'>
@@ -41,12 +44,26 @@
 
 
     </ul>
+    <section id="about">
+      <h1>Check out my Projects on GitHub:</h1>
+      <ul>
+
+      </ul>
+    </section>
   </main>
-    <script src="script/jquery-2.1.4.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
-    <script src='script/jobView.js'></script>
-    <script src='script/app.js'></script>
-    <script src='script/dummy.js'></script>
+  <script src="script/jquery-2.1.4.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
+  <script src='/script/page.js'></script>
+  <script src='/script/jobView.js'></script>
+  <script src='/script/app.js'></script>
+  <script src=".gitignore/github.js"></script>
+  <script src='/script/homeController.js'></script>
+  <script src='/script/jobController.js'></script>
+  <script src='/script/aboutController.js'></script>
+  <script src='/script/adminController.js'></script>
+  <script src="/script/repo.js"></script>
+  <script src="/script/repoView.js"></script>
+  <script src='/script/routes.js'></script>
     <script>
       Quarterbacks.fetchAll();
     </script>
