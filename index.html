@@ -24,6 +24,9 @@
         </article>
       </section>
     </script>
+    <script id="about-template" type="text/x-handlebars-template">
+    <a href="{{html_url}}"><li>{{name}}</li></a>
+  </script>
   </head>
   <body>
     <section class='wrapper'>
@@ -48,6 +51,12 @@
           <p>Hello! welcome to my Portfolio. My name is Lauren and I am taking Code Fellows 301 course. I am working toward the 401 iOS program. I have lived in Seattle my whole life! </p>
         </section>
         <div id='jobShow'></div>
+        <section id="gitHubProjects">
+          <h1>Check out my Projects on GitHub:</h1>
+          <ul>
+
+          </ul>
+        </section>
       </section><!--closes the container-->
       </main>
       <footer>
@@ -58,6 +67,7 @@
             <a href='https://github.com/laurens914'><img src='images/github.png'></a>
             <a href='https://twitter.com/laurennicole747'><img src='images/twitter.png'></a>
           </ul>
+
         </section>
       </footer>
 
@@ -68,9 +78,13 @@
   <script src='/script/page.js'></script>
   <script src='/script/jobView.js'></script>
   <script src='/script/app.js'></script>
+  <script src=".gitignore/github.js"></script>
   <script src='/script/homeController.js'></script>
   <script src='/script/jobController.js'></script>
   <script src='/script/aboutController.js'></script>
+  <!-- <script src='/script/adminController.js'></script> -->
+  <script src="script/repo.js"></script>
+  <script src="script/repoView.js"></script>
   <script src='/script/routes.js'></script>
   <!-- <script>
     Jobs.fetchAll();
