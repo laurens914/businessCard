@@ -1,12 +1,17 @@
 body {
   margin-top: 3em;
-  background-color:#3B6377;
+  background-color:#686E71;
   align-content: center;
   color:#E8ECF5;
 }
-
+header {
+  background-color:#2B2E32;
+  margin: 0 auto;
+}
 h2 {
   font-family: Pacifico;
+  /*outline:solid .2em black;*/
+  text-align: center;
 }
 
 li {
@@ -14,15 +19,20 @@ li {
 }
 
 .headShot {
-  height:15em;
-  width:15em;
+  height:7em;
+  width:7em;
   margin-bottom: 1em;
+  border-radius:10em;
+  border:solid white;
+  margin-top:.5em;
+  display:inline-block;
 }
 
 ul a img {
   height:2em;
   width:2em;
-
+  text-align:center;
+  /*float:right;*/
 }
 nav {
   display:block;
@@ -32,10 +42,11 @@ ul{
 }
 .navbar ul{
   display:inline-flex;
+  text-align: center;
 }
 #hamburger {
-  width: 7em;
-  height: 7em;
+  width: 3em;
+  height: 3em;
   float:right;
   background-color:#3B6377;
 }
@@ -47,11 +58,13 @@ ul{
   font-size: 1.5em;
   padding: .5em .2em;
 }
-/*.navbar:hover ul {
-  display: block;
-}*/
+
 a{
   text-decoration: none;
+}
+footer{
+  background-color:#2B2E32;
+  margin: 0 auto;
 }
 
 @media only screen and (min-width: 640px) {

@@ -4,15 +4,14 @@
     <meta charset="utf-8">
     <title>Lauren Spatz</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style/icons.css">
-    <link rel="stylesheet" href="style/skeleton.css">
-    <link rel="stylesheet" href="style/normalize.css">
+    <link rel="stylesheet" href="/style/icons.css">
+    <link rel="stylesheet" href="/style/skeleton.css">
+    <link rel="stylesheet" href="/style/normalize.css">
     <link href='https://fonts.googleapis.com/css?family=Pacifico|Varela' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="/style/style.css">
     <script id='jobPosting' type='text/x-handlebars-template'>
       <section class='jobs' id="jobs">
         <article class='template2'>
-          <header>
             <h3>{{jobTitle}}</h3>
             <div class="jobSection">
               <ul>
@@ -22,48 +21,60 @@
                 <li class="jobDescription">{{jobDescription}}</li>
               </ul>
             </div>
-          </header>
         </article>
       </section>
     </script>
   </head>
   <body>
     <section class='wrapper'>
-      <section class='container'>
         <header>
-          <h2> Lauren Nicole Spatz</h2>
+          <section class='container'>
+          <img class='headShot' src="/images/IMG_0054.jpg">
+          <h2 class'one column' 'offset-by-three columns'> Lauren Nicole Spatz</h2>
           <nav class='navbar'>
-            <img class="icon-menu" id="hamburger" src="images/hamburger.png" alt="view icon">
+            <img class="icon-menu" id="hamburger" src="/images/hamburger.png" alt="view icon">
             <ul>
-              <li id='home' class="tab" data-content="articles"><a href="#" class="icon-home"> Home</a></li>
-              <li id='about' class="tab" data-content="about"><a href="#" class="icon-address-book"> About</a></li>
-              <li id="jobSelector" class="tab" data-content="jobs"><a href="#" class="icon-display"> Jobs</a></li>
+              <li id='home' class="tab" data-content="articles"><a href="/" class="icon-home"> Home</a></li>
+              <li id='about' class="tab" data-content="about"><a href="/about" class="icon-address-book"> About</a></li>
+              <li id="jobSelector" class="tab" data-content="jobs"><a href="/jobs" class="icon-display"> Jobs</a></li>
               <!--the icon for computer display is what i wanted to use for the jobs display but icomoon was not properly displaying. was happening with multiple symbols and could not find a way to resolve. i know the three lines is not hte best representation.-->
             </ul>
           </nav>
+        </section>
        </header>
+       <section class='container'>
        <main>
-        <img class='headShot' src="images/IMG_0054.jpg">
-        <ul>
-          <a href='https://www.facebook.com/laurens914'><img src='images/facebook.png'></a>
-          <a href='https://www.linkedin.com/profile/view?id=AAMAABQ6EWgBRP2JHVSNVEwO70aY1aQp2YhXG-o&trk=hp-identity-photo'><img src='images/linkedin.png'></a>
-          <a href='https://github.com/laurens914'><img src='images/github.png'></a>
-          <a href='https://twitter.com/laurennicole747'><img src='images/twitter.png'></a>
-        </ul>
         <section class='about-me' id='about-me'>
           <p>Hello! welcome to my Portfolio. My name is Lauren and I am taking Code Fellows 301 course. I am working toward the 401 iOS program. I have lived in Seattle my whole life! </p>
         </section>
         <div id='jobShow'></div>
+      </section><!--closes the container-->
       </main>
+      <footer>
+        <section class='container'>
+          <ul>
+            <a href='https://www.facebook.com/laurens914'><img src='images/facebook.png'></a>
+            <a href='https://www.linkedin.com/profile/view?id=AAMAABQ6EWgBRP2JHVSNVEwO70aY1aQp2YhXG-o&trk=hp-identity-photo'><img src='images/linkedin.png'></a>
+            <a href='https://github.com/laurens914'><img src='images/github.png'></a>
+            <a href='https://twitter.com/laurennicole747'><img src='images/twitter.png'></a>
+          </ul>
+        </section>
+      </footer>
+
+
   </section><!--closes the wrapper -->
-</section><!--closes the container-->
   <script src="script/jquery-2.1.4.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
-  <script src='script/jobView.js'></script>
-  <script src='script/app.js'></script>
-  <script>
+  <script src='/script/page.js'></script>
+  <script src='/script/jobView.js'></script>
+  <script src='/script/app.js'></script>
+  <script src='/script/homeController.js'></script>
+  <script src='/script/jobController.js'></script>
+  <script src='/script/aboutController.js'></script>
+  <script src='/script/routes.js'></script>
+  <!-- <script>
     Jobs.fetchAll();
-  </script>
+  </script> -->
 </body>
 </html>
 
