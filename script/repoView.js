@@ -7,14 +7,14 @@
   };
 
   var render = function(repos) {
-    var aboutTemplate = Handlebars.compile($('#about-template').text());
-    return aboutTemplate(repos);
+    return $('<li>')
+    .html('<a href="' + repos.html_url + '">' + repos.full_name + '</a>');
   };
 
   repoView.index = function(){
     ui();
     $('#gitHubProjects ul').append(
-      repos.with('stargazers_count').map(render)
+      repos.all.map(render)
   );};
 
   module.repoView = repoView;

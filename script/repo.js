@@ -9,7 +9,6 @@
     $.ajax({
       url: 'https://api.github.com/users/laurens914/repos' + qs,
       type: 'GET',
-      headers: {'Authorization': 'token ' + githubToken},
       success: function(data, message, xhr){
         repos.all = data;
       }
