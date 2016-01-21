@@ -1,4 +1,3 @@
-// Configure a view object, to hold all our functions for dynamic updates and article-related event handlers.
 var jobView = {};
 $('section.about-me').hide();
 $('#gitHubProjects').hide();
