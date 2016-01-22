@@ -9,12 +9,7 @@
     <link rel="stylesheet" href="style/normalize.css">
     <link href='https://fonts.googleapis.com/css?family=Pacifico|Varela' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="style/style.css">
-    <script id="dummy-template" type="text/x-handlebars-template">
-      <li>{{quarterback}} plays for the {{teamName}} </li>
-    </script>
-    <script id="about-template" type="text/x-handlebars-template">
-    <a href="{{html_url}}"><li>{{name}}</li></a>
-  </script>
+
   </head>
   <body>
     <section class='wrapper'>
@@ -24,10 +19,9 @@
           <nav class='navbar'>
             <img class="icon-menu" id="hamburger" src="images/hamburger.png" alt="view icon">
             <ul>
-              <li id='home' class="tab" data-content="articles"><a href="#" class="icon-home"> Home</a></li>
-              <li id='about' class="tab" data-content="about"><a href="#" class="icon-address-book"> About</a></li>
-              <li id="jobSelector" class="tab" data-content="jobs"><a href="#" class="icon-display"> Jobs</a></li>
-              <!--the icon for computer display is what i wanted to use for the jobs display but icomoon was not properly displaying. was happening with multiple symbols and could not find a way to resolve. i know the three lines is not hte best representation.-->
+              <li id='home' class="tab" data-content="articles"><a href="#"> Home</a></li>
+              <li id='about' class="tab" data-content="about"><a href="#"> About</a></li>
+              <li id="jobSelector" class="tab" data-content="jobs"><a href="#"> Jobs</a></li>
             </ul>
           </nav>
        </header>
@@ -40,32 +34,23 @@
           <a href='https://github.com/laurens914'><img src='images/github.png'></a>
           <a href='https://twitter.com/laurennicole747'><img src='images/twitter.png'></a>
         </ul>
-    <ul class='dummyDataView'>
 
-
-    </ul>
-    <section id="about">
-      <h1>Check out my Projects on GitHub:</h1>
-      <ul>
-
-      </ul>
-    </section>
   </main>
   <script src="script/jquery-2.1.4.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
   <script src='/script/page.js'></script>
   <script src='/script/jobView.js'></script>
   <script src='/script/app.js'></script>
-  <script src=".gitignore/github.js"></script>
   <script src='/script/homeController.js'></script>
+  <script src='/script/dummy.js'></script>
   <script src='/script/jobController.js'></script>
   <script src='/script/aboutController.js'></script>
   <script src='/script/adminController.js'></script>
   <script src="/script/repo.js"></script>
   <script src="/script/repoView.js"></script>
   <script src='/script/routes.js'></script>
-    <script>
+    <!-- <script>
       Quarterbacks.fetchAll();
-    </script>
+    </script> -->
   </body>
 </html>

@@ -14,9 +14,9 @@ jobView.initIndexPage = function() {
 
 var quarterbackView = {};
 
-quarterbackView.initAdminPage = function() {
+quarterbackView.initIndexPage = function() {
   var template = Handlebars.compile($('#dummy-template').text());// = ...?
-  Quarterbacks.allTeamNames().forEach(function(player) {
+  Quarterbacks.allInfo().forEach(function(player) {
     $('.dummyDataView').append(template(player));
   });
 };

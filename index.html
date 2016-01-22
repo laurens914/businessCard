@@ -24,6 +24,9 @@
         </article>
       </section>
     </script>
+    <script id="dummy-template" type="text/x-handlebars-template"> <!--links to dummy data on admin page-->
+      <li>{{quarterback}} plays for the {{teamName}} </li>
+    </script>
   </head>
   <body>
     <section class='wrapper'>
@@ -34,10 +37,9 @@
           <nav class='navbar'>
             <img class="icon-menu" id="hamburger" src="/images/hamburger.png" alt="view icon">
             <ul>
-              <li id='home' class="tab" data-content="articles"><a href="/" class="icon-home"> Home</a></li>
-              <li id='about' class="tab" data-content="about"><a href="/about" class="icon-address-book"> About</a></li>
-              <li id="jobSelector" class="tab" data-content="jobs"><a href="/jobs" class="icon-display"> Jobs</a></li>
-              <!--the icon for computer display is what i wanted to use for the jobs display but icomoon was not properly displaying. was happening with multiple symbols and could not find a way to resolve. i know the three lines is not hte best representation.-->
+              <li id='home' class="tab" data-content="articles"><a href="/"> Home</a></li>
+              <li id='about' class="tab" data-content="about"><a href="/about"> About</a></li>
+              <li id="jobSelector" class="tab" data-content="jobs"><a href="/jobs"> Jobs</a></li>
             </ul>
           </nav>
         </section>
@@ -50,9 +52,10 @@
         <div id='jobShow'></div>
         <section id="gitHubProjects">
           <h1>Look at my Work on GitHub:</h1>
-          <ul>
-
-          </ul>
+          <ul></ul>
+        </section>
+        <section class='adminViewOnly'>
+          <ul class='dummyDataView'></ul>
         </section>
       </section><!--closes the container-->
       </main>
@@ -64,28 +67,23 @@
             <a href='https://github.com/laurens914'><img src='images/github.png'></a>
             <a href='https://twitter.com/laurennicole747'><img src='images/twitter.png'></a>
           </ul>
-
         </section>
       </footer>
-
-
-  </section><!--closes the wrapper -->
+    </section><!--closes the wrapper -->
   <script src="script/jquery-2.1.4.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
   <script src='/script/page.js'></script>
+  <script src='/script/dummy.js'></script>
   <script src='/script/jobView.js'></script>
   <script src='/script/app.js'></script>
   <script src='/script/homeController.js'></script>
   <script src='/script/jobController.js'></script>
   <script src='/script/aboutController.js'></script>
-  <!-- <script src='/script/adminController.js'></script> -->
+  <script src='/script/adminController.js'></script>
   <script src="script/repo.js"></script>
   <script src="script/repoView.js"></script>
   <script src='/script/routes.js'></script>
-  <!-- <script>
-    Jobs.fetchAll();
-  </script> -->
-</body>
+  </body>
 </html>
 
 
