@@ -1,12 +1,9 @@
-
 Jobs.all = [];
-var checkData;
+
 function Jobs (jobHistory){
-  this.jobTitle = jobHistory.jobTitle;
-  this.company = jobHistory.company;
-  this.dateStarted = jobHistory.dateStarted;
-  this.dateLeft = jobHistory.dateLeft;
-  this.jobDescription = jobHistory.jobDescription;
+  Object.keys(jobHistory).forEach(function (a,index,keys){
+    this[a]=jobHistory[a];
+  },this);
 }
 
 Jobs.prototype.toHtml = function() {
@@ -26,7 +23,6 @@ Jobs.fetchAll = function() {
     Jobs.loadAll(JSON.parse(localStorage.jobData));
     jobView.initIndexPage();
   } else {
-    console.log('got here');
     $.getJSON('/data/jobInfo.json').done(function(jobData){
       Jobs.loadAll(jobData);
       localStorage.jobData = JSON.stringify(jobData);

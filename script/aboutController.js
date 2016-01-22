@@ -2,7 +2,8 @@
   var aboutController = {};
   aboutController.index = function() {
     $('#jobShow').fadeOut();
-    $('section.about-me').fadeIn();
+    $('.adminViewOnly').hide();
+    $('#about-me').fadeIn();
     $('#gitHubProjects').fadeIn();
     repos.requestRepos(repoView.index);
   };

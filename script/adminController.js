@@ -1,7 +1,9 @@
 (function(module) {
-  var adminfController = {};
-  adminController.admin = function() {
-    repos.requestRepos(repoView.admin);
+  var adminController = {};
+  adminController.index = function() {
+    Quarterbacks.fetchAll();
+    $('.adminViewOnly').fadeIn();
+    $('#jobShow' , '#gitHubProjects' , '#about-me').fadeOut();
   };
   module.adminController = adminController;
 })(window);
